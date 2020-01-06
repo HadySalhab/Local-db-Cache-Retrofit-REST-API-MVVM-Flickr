@@ -47,7 +47,7 @@ class PhotoRepository (
                 val shouldFetch = data ==null || data.isEmpty() || photoListRateLimit.shouldFetch(query)
                 Log.d(TAG, "shouldFetch: ${shouldFetch}")
                 return  shouldFetch
-            } 
+            }
 
             override fun loadFromDb(): LiveData<List<Photo>> = flickrPhotoDao.searchPhotos(query)
 
@@ -75,10 +75,12 @@ class PhotoRepository (
 
             override fun shouldFetch(data: List<Photo>?): Boolean {
                 Log.d(TAG, "shouldFetch: \"\" ")
-                val shouldFetch = data ==null || data.isEmpty() || photoListRateLimit.shouldFetch("")
+                val shouldFetch =
+                    data == null || data.isEmpty() || photoListRateLimit.shouldFetch("")
                 Log.d(TAG, "shouldFetch: ${shouldFetch}")
-                return  shouldFetch
+                return shouldFetch
             }
+
             override fun loadFromDb(): LiveData<List<Photo>> = flickrPhotoDao.getPhotos()
 
             override  fun createCall(): LiveData<ApiResponse<FlickrResponse>> = flickrApi.getRecentPhotos()
