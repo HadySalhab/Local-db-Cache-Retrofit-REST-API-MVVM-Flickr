@@ -29,7 +29,7 @@ class DisplayPhotoViewModel(val photo: Photo, val app: Application) : AndroidVie
  private fun generateColor() {
         Glide.with(app.applicationContext)
             .asBitmap()
-            .load(photo.url.toUri().buildUpon().scheme("https").build())
+            .load(photo.url?.toUri()?.buildUpon()?.scheme("https")?.build())
             .into(object : CustomTarget<Bitmap>() {
                 override fun onLoadCleared(placeholder: Drawable?) {
                 }
