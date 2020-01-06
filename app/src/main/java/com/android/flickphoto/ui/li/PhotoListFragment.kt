@@ -26,6 +26,9 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
  */
 
 class PhotoListFragment : Fragment() {
+    companion object {
+        private const val TAG = "PhotoListFragment"
+    }
 
 
 
@@ -61,6 +64,7 @@ class PhotoListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+        Log.d(TAG, "onCreate: ")
     }
 
     override fun onCreateView(
@@ -74,10 +78,10 @@ class PhotoListFragment : Fragment() {
         binding.photosRecyclerview.adapter = PhotoListAdapter(displayPhoto)
         binding.swipeRefreshLayout.setOnRefreshListener {
             if(photoListViewModel.isUserSearching){
-                photoListViewModel.getFlickrPhotos(photoListViewModel.query.value?:"")
+                photoListViewModel.refresh(photoListViewModel.query.value?:"")
             }
             else{
-                photoListViewModel.getFlickrPhotos("")
+                photoListViewModel.refresh("")
             }
             binding.swipeRefreshLayout.isRefreshing = false
         }
@@ -85,13 +89,7 @@ class PhotoListFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        photoListViewModel.query.observe(viewLifecycleOwner, Observer { query ->
-            photoListViewModel.getFlickrPhotos(query)
-        })
 
-    }
 
 
 
