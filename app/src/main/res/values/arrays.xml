@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="screen_mode_entries">
+        <item name="night_mode">@string/night_mode</item>
+        <item name="light_mode">@string/light_mode</item>
+        <item name="system_default_mode">@string/system_mode</item>
+    </string-array>
+
+    <string-array name="screen_mode_entryValues">
+        <item name="night_mode">@string/night_mode</item>
+        <item name="light_mode">@string/light_mode</item>
+        <item name="system_default_mode">@string/system_mode</item>
+    </string-array>
+
+</resources>

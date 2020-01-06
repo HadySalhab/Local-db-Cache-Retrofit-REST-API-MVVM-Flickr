@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference
+        app:title="@string/screen_mode_title"
+        app:entryValues="@array/screen_mode_entryValues"
+        app:entries="@array/screen_mode_entries"
+        app:defaultValue="@string/system_mode"
+        app:key="@string/screen_mode_key"
+        />
+
+</PreferenceScreen>

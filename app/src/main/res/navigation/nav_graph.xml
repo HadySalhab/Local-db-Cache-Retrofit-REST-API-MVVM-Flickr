@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="Flickr photos"
+    app:startDestination="@id/photoListFragment">
+
+    <fragment
+        android:id="@+id/photoListFragment"
+        android:name="com.android.flickphoto.ui.li.PhotoListFragment"
+        android:label="Flickr"
+        tools:layout="@layout/fragment_photo_list" >
+        <action
+            android:id="@+id/action_photoListFragment_to_displayPhotoFragment"
+            app:destination="@+id/displayPhotoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayPhotoFragment"
+        android:name="com.android.flickphoto.ui.display.DisplayPhotoFragment"
+        android:label="Flickr"
+        tools:layout="@layout/fragment_display_photo" >
+        <argument
+            android:name="photo"
+            app:argType="com.android.flickphoto.models.Photo" />
+    </fragment>
+    <fragment
+        android:id="@+id/flickrPhotoSettings"
+        android:name="com.android.flickphoto.ui.preferences.FlickrPhotoSettings"
+        android:label="FlickrPhotoSettings"
+        />
+</navigation>
