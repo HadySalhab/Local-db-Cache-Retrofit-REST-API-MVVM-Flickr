@@ -2,7 +2,6 @@ package com.android.flickphoto.ui.display
 
 import android.app.Application
 import android.graphics.Bitmap
-import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import androidx.core.net.toUri

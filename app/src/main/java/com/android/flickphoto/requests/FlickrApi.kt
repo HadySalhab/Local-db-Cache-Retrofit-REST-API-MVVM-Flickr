@@ -3,11 +3,7 @@ package com.android.flickphoto.requests
 import androidx.lifecycle.LiveData
 import com.android.flickphoto.requests.responses.ApiResponse
 import com.android.flickphoto.requests.responses.FlickrResponse
-import com.android.flickphoto.requests.responses.PhotoResponse
 import com.android.flickphoto.util.API_KEY
-import kotlinx.coroutines.Deferred
-import retrofit2.Call
-import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 

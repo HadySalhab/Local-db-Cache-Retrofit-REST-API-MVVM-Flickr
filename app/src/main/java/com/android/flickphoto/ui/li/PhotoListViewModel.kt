@@ -1,7 +1,6 @@
 package com.android.flickphoto.ui.li
 
 import android.app.Application
-import android.content.Context
 import android.text.TextUtils
 import android.util.Log
 import androidx.lifecycle.*
@@ -10,7 +9,6 @@ import com.android.flickphoto.repositories.PhotoRepository
 import com.android.flickphoto.util.PreferencesStorage
 import com.android.flickphoto.util.Resource
 import kotlinx.coroutines.cancel
-import kotlinx.coroutines.launch
 
 
 class PhotoListViewModel(private val photoRepository: PhotoRepository,private val app: Application) : AndroidViewModel(app) {
