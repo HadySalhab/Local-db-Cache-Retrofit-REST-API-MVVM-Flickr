@@ -31,7 +31,7 @@
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:listData="@{viewModel.photos}"
+                app:listData="@{viewModel.results.data}"
                 app:spanCount="@integer/grid_span"
                 tools:context=".ui.li.PhotoListFragment"
                 tools:itemCount="16"
@@ -46,7 +46,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:flickrApiStatus="@{viewModel.status}" />
+            app:flickrApiStatus="@{viewModel.results.status}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
