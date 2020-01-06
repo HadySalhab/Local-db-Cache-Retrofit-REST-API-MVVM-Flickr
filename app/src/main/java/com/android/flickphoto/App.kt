@@ -1,6 +1,7 @@
 package com.android.flickphoto
 
 import android.app.Application
+import com.android.flickphoto.db.FlickrPhotoDatabase
 import com.android.flickphoto.models.Photo
 import com.android.flickphoto.repositories.PhotoRepository
 import com.android.flickphoto.requests.FlickrApiClient
@@ -14,6 +15,11 @@ import org.koin.dsl.module
 
 class App : Application() {
     private val koinModule = module {
+
+        single {
+            FlickrPhotoDatabase.getInstance(get())
+        }
+
         viewModel {
             PhotoListViewModel(get(),this@App)
         }
