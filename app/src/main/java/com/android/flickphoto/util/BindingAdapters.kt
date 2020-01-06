@@ -41,17 +41,17 @@ fun ImageView.bindImage(imgUrl:String?){
 }
 
 @BindingAdapter("flickrApiStatus")
-fun bindStatus(statusImageView: ImageView, status: FlickrApiStatus?) {
+fun bindStatus(statusImageView: ImageView, status: Status) {
     when (status) {
-        FlickrApiStatus.LOADING -> {
+        Status.LOADING -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.loading_animation)
         }
-        FlickrApiStatus.ERROR -> {
+        Status.ERROR -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }
-        FlickrApiStatus.DONE -> {
+        Status.SUCCESS -> {
             statusImageView.visibility = View.GONE
         }
     }
