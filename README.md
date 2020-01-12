@@ -69,7 +69,7 @@ The purpose of creating this application was to show how to implement latest fea
 <li>https://developer.android.com</li>
 <li>https://commonsware.com/</li>
 <li>https://www.bignerdranch.com/books/android-programming-the-big-nerd-ranch-guide-4th/</li>
-<li>https://codingwithmitch.com/courses/rest-api-mvvm-retrofit2/</li>
+<li>https://codingwithmitch.com/courses/android-local-database-cache-rest-api/</li>
 <li>https://developer.android.com/courses/</li>
 <li>https://github.com/bumptech/glide</li>
 </ul>
