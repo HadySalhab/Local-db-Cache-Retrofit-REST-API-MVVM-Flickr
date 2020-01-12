@@ -17,7 +17,8 @@ The purpose of creating this application was to show how to implement latest fea
 
 <h3><b>Android development concepts used: </b></h3>
 <ul>
-<li>Communicating with a webservice (rest api) using Retrofit2</li>
+<li>Communicating with a webservice (RESTfull API) using Retrofit2</li>
+ <li>Handling Api response (JSON format)</li>
 <li>Network Timeouts</li>
 <li>Converting Retrofit Calls to LiveData (Call Adapters)</li>
 <li>Caching data for when the network goes offline</li>
